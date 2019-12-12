@@ -1,0 +1,49 @@
+Course Project: Shiny Application and Reproducible Pitch
+========================================================
+author: Yogitha Dodda
+date: 12-Dec-2019
+autosize: true
+
+Overview
+========================================================
+
+This application was built for the week 4 project for the couse "Developing Data Products". The plot depicts world telephone ownership details.
+
+The objective of the project is two-fold:
+- Develop a shiny application and publish it.
+- Create presentation as a pitch for the developed application.
+
+
+Description and Instructions
+========================================================
+The graph depicts the telephone ownership details between 1951 to 1961.
+
+X-axis - Years
+
+Y-axis - Number of telephones
+
+Each year is shown with a different colour.
+
+Use the drop-down to see the graph for different geographical regions. 
+
+Code for Plot
+========================================================
+Mentioned below is the code for generating the plot. Here the input(from drop-down) is given as "Europe". 
+```{r}
+barplot(WorldPhones[,"Europe"]*1000, 
+                main="Europe",
+                ylab="Number of Telephones",
+                xlab="Year", 
+                col=rainbow(7))
+```
+
+Links
+========================================================
+
+The application developed using shiny can be found at this URL:
+
+https://yogithad.shinyapps.io/World-Telephones/.
+
+The source codes for the application and presentation are in the following Github repository:
+
+https://github.com/Yogithad/Shiny-Application-Reproducible-Pitch
